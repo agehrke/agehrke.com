@@ -3,6 +3,7 @@ remote_theme: andrewhwanpark/dark-poole
 # Gems
 plugins:
   - jekyll-seo-tag # Used by andrewhwanpark/dark-poole
+  - jekyll-remote-theme
 
 
 sass:
