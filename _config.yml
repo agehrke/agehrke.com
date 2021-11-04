@@ -6,6 +6,20 @@ plugins:
   - jekyll-remote-theme
 
 
+# Navbar page list
+nav:
+  - title: Blog
+    url: /archive
+
+  - title: About
+    url: /about
+
+# Specify the author for blog posts
+author:
+  name: Andreas Gehrke
+  url: https://twitter.com/mdo
+  email: ag@agehrke.com
+
 sass:
   sass_dir: _sass
   style: :compressed
