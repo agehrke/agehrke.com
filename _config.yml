@@ -1,5 +1,12 @@
 # Based on https://github.com/andrewhwanpark/dark-poole
 
+# Setup
+title: Andreas Gehrke - software developer and architect
+#url: https://test2.agehrke.com/
+paginate: 1
+baseurl: ""
+permalink: pretty
+
 # Navbar page list
 nav:
   - title: Blog
