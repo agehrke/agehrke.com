@@ -12,9 +12,6 @@ nav:
   - title: Blog
     url: /archive
 
-  - title: About
-    url: /about
-
 # Specify the author for blog posts
 author:
   name: Andreas Gehrke
