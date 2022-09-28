@@ -17,7 +17,7 @@ What first caught my eye was that the stack trace contained non of our custom co
 
 Here's what I wrote in a ticket to Sitecore Support:
 
-From the exception stack trace I have narrowed down the issue to `Sitecore.Services.Infrastructure.Web.Http.Dispatcher.NamespaceHttpControllerSelector.InitializeControllerDictionary()`, which instantiates a `HttpControllerDescriptor` for each API controller found in _any_ referenced assembly. Some API controllers in the `Sitecore.ExperienceAnalytics.dll` assembly are decorated with `Sitecore.ExperienceAnalytics.Api.Http.Filters.NotFoundExceptionFilterAttribute`. This attribute contains a parameterless constructor that is called by internals of ASP.NET Web API. How ever the constructor calls `Sitecore.ExperienceAnalytics.Api.ApiContainer.GetLogger()` which tries to create an object based on what is defined in an `experienceAnalytics/api/logger` configuration element. This element does not exist as it's defined in `Sitecore.ExperienceAnalytics.WebAPI.config`, which should be disabled on CD servers.
+From the exception stack trace I have narrowed down the issue to `Sitecore.Services.Infrastructure.Web.Http.Dispatcher.NamespaceHttpControllerSelector.InitializeControllerDictionary()`, which instantiates a `HttpControllerDescriptor` for each API controller found in _any_ referenced assembly. Some API controllers in the `Sitecore.ExperienceAnalytics.dll` assembly are decorated with `Sitecore.ExperienceAnalytics.Api.Http.Filters.NotFoundExceptionFilterAttribute`. This attribute contains a parameterless constructor that is called by internals of ASP.NET Web API. However the constructor calls `Sitecore.ExperienceAnalytics.Api.ApiContainer.GetLogger()` which tries to create an object based on what is defined in an `experienceAnalytics/api/logger` configuration element. This element does not exist as it's defined in `Sitecore.ExperienceAnalytics.WebAPI.config`, which should be disabled on CD servers.
 
 ### My (temporary) solution
 
@@ -35,7 +35,7 @@ On May 11th I received information Sitecore Support that they had updated [docum
 
 > ### xAnalytics assembly files
 > 
-> If you have implemented custom code that uses ASP.NET Web API attribute routing, to avoid errors we recommend that you disable the following .dll files in the \\Website\\bin folder:
+> If you have implemented custom code that uses ASP.NET Web API attribute routing, to avoid errors we recommend that you disable the following .dll files in the `\Website\bin` folder:
 > 
 > - Sitecore.ExperienceAnalytics.dll
 > - Sitecore.ExperienceAnalytics.Client.dll

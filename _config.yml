@@ -3,7 +3,6 @@
 # Setup
 title: Andreas Gehrke - software developer and architect
 #url: https://test2.agehrke.com/
-paginate: 1
 baseurl: ""
 permalink: pretty
 
@@ -29,7 +28,6 @@ sass:
 # Gems
 plugins:
   - jekyll-gist
-  - jekyll-paginate
   - jekyll-seo-tag
 
 # Optimize Jekyll
@@ -40,4 +38,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE.md
-  - README.m
+  - README.md
