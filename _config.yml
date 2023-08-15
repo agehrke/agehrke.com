@@ -72,6 +72,9 @@ author:
 
 footer: # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-footer
 
+atom_feed:
+  hide: true
+
 defaults:
   # _posts
   - scope:
@@ -80,9 +83,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      show_date: true ## Dates is nice to have
+      read_time: false # No need for reading time calculated
       comments: true
-      share: true
+      share: false # Drop the dumb social share links
       related: true
   # _pages
   - scope:
