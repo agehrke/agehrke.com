@@ -56,9 +56,10 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Andreas Gehrke"
-  avatar : "/assets/Andreas.jpg"
-  bio    : "Software architecture and .NET developer"
+  name     : "Andreas Gehrke"
+  avatar   : "/assets/Andreas.jpg"
+  bio      : "Software architecture and .NET developer"
+  location : "Copenhagen, Denmark"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
