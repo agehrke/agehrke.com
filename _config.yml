@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: agehrke
 github_username: agehrke
 minimal_mistakes_skin: dark
-search: true
+search: false # No need for the search feature
 
 # Build settings
 markdown: kramdown
@@ -58,9 +58,12 @@ plugins:
 author:
   name     : "Andreas Gehrke"
   avatar   : "/assets/Andreas.jpg"
-  bio      : "Software architecture and .NET developer"
+  bio      : "Software architect and .NET developer"
   location : "Copenhagen, Denmark"
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:ag@agehrke.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://www.agehrke.com"
@@ -97,9 +100,10 @@ defaults:
       layout: single
       author_profile: true
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# Disable the taxonomy/archive pages - https://mmistakes.github.io/minimal-mistakes/docs/configuration/#archive-settings
+# category_archive:
+#   type: liquid
+#   path: /categories/
+# tag_archive:
+#   type: liquid
+#   path: /tags/
