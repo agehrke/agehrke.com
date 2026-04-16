@@ -21,6 +21,7 @@ twitter_username: agehrke
 github_username: agehrke
 minimal_mistakes_skin: dark
 search: false # No need for the search feature
+repository: agehrke/agehrke.com
 
 # Build settings
 markdown: kramdown
